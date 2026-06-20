@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>"I design for" — typeface options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Fraunces:wght@300;400&family=Instrument+Serif&family=Inter:wght@300;400;500&family=Libre+Caslon+Text&family=Newsreader:wght@300;400&family=Playfair+Display:wght@400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--paper:#F7F4ED;--ink:#1C1814;--muted:#6B6359;--accent:#5B5BD6;--line:#E0D9CC}
+*{margin:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;padding:50px clamp(24px,5vw,80px) 100px}
+h1{font-family:'Inter',sans-serif;font-weight:500;font-size:1.3rem;margin-bottom:46px}
+.opt{border-top:1px solid var(--line);padding:28px 0 20px}
+.opt:first-child{border-top:0}
+.tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px}
+.row{display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<h1>"I design for ___" — different typeface pairings (uniform size, no italic, light weight, blue word, no underline)</h1>
+
+<div class="opt">
+  <span class="tag">1 · Inter + Newsreader (soft editorial serif)</span>
+  <div class="row">
+    <span style="font-family:'Inter';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Newsreader';font-weight:300;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Newsreader — NYT-style serif, very calm and readable, less decorative than Fraunces.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">2 · Inter + Playfair Display</span>
+  <div class="row">
+    <span style="font-family:'Inter';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Playfair Display';font-weight:400;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Playfair — higher contrast strokes, a bit more fashion-editorial &amp; crisp.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">3 · Inter + Libre Caslon Text</span>
+  <div class="row">
+    <span style="font-family:'Inter';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Libre Caslon Text';font-weight:400;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Classic book serif — old-school elegant, very different texture from Fraunces.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">4 · Inter + Instrument Serif</span>
+  <div class="row">
+    <span style="font-family:'Inter';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Instrument Serif';font-weight:400;font-size:28px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Instrument Serif — quirky, refined, a little more personality without being loud.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">5 · Space Grotesk + Space Grotesk (all sans, one family)</span>
+  <div class="row">
+    <span style="font-family:'Space Grotesk';font-weight:300;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Space Grotesk';font-weight:500;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">No serif at all — single modern grotesk family, weight is the only contrast. Very clean/techy.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">6 · DM Sans + DM Sans (rounded, soft sans)</span>
+  <div class="row">
+    <span style="font-family:'DM Sans';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'DM Sans';font-weight:500;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Softer, rounder sans than Inter — friendlier feel, still minimal, no serif.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">7 · Inter + Fraunces (current site pairing, for reference)</span>
+  <div class="row">
+    <span style="font-family:'Inter';font-weight:400;font-size:26px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Fraunces';font-weight:300;font-size:26px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">What's live now — included so you can compare directly against the new options.</p>
+</div>
+
+</body>
+</html>

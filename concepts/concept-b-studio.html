@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concept B — Studio · Shilpa Kankaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --sand:#ECE6DB; --sand-2:#E2DBCC; --ink:#16140F; --ink-soft:#5C564B;
+  --accent:#2E4B3A; --accent-2:#3E6450; --line:#D2CABA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--sand);color:var(--ink);font-family:'Space Grotesk',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(24px,4vw,64px)}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(24px,4vw,64px)}
+.logo{font-weight:700;font-size:1.3rem;letter-spacing:-.02em}
+.logo b{color:var(--accent)}
+.nav-r{display:flex;align-items:center;gap:34px}
+.nav-r a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;opacity:.7;transition:opacity .3s}
+.nav-r a:hover{opacity:1}
+.pill{background:var(--ink);color:var(--sand);padding:11px 22px;border-radius:40px;
+  font-size:14px;font-weight:500;opacity:1!important}
+
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(28px,4vw,60px);
+  align-items:center;padding:clamp(30px,5vw,70px) 0 clamp(20px,3vw,40px)}
+.avail{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;
+  color:var(--accent);margin-bottom:28px}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--accent-2);display:inline-block}
+.headline{font-weight:600;font-size:clamp(2.6rem,6.4vw,5.4rem);line-height:1;letter-spacing:-.035em}
+.headline .o{color:var(--ink-soft)}
+.headline .g{color:var(--accent)}
+.lede{max-width:46ch;color:var(--ink-soft);font-size:clamp(1rem,1.4vw,1.2rem);
+  line-height:1.6;margin:clamp(24px,3vw,34px) 0 clamp(28px,3.5vw,38px)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{font-size:15px;font-weight:500;padding:15px 28px;border-radius:40px;text-decoration:none;transition:transform .3s}
+.btn-dark{background:var(--ink);color:var(--sand)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+
+.hero-img{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--sand-2)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.tagchip{position:absolute;left:18px;bottom:18px;background:rgba(236,230,219,.92);
+  backdrop-filter:blur(6px);border-radius:30px;padding:9px 18px;font-size:13px;font-weight:500}
+
+.marquee{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  margin-top:clamp(24px,3vw,40px);padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee span{font-size:clamp(1rem,2vw,1.5rem);font-weight:500;letter-spacing:-.01em;margin:0 28px;color:var(--ink)}
+.marquee span.muted{color:var(--ink-soft)}
+.marquee b{color:var(--accent)}
+
+.work{padding:clamp(48px,7vw,92px) 0}
+.work-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;flex-wrap:wrap;gap:16px}
+.work-head h2{font-weight:600;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em}
+.work-head span{font-size:14px;font-weight:500;color:var(--ink-soft)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px)}
+.card{background:var(--sand-2);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--ink);
+  transition:transform .4s}
+.card:hover{transform:translateY(-6px)}
+.card-img{aspect-ratio:4/3;overflow:hidden;background:#ddd6c7}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-body{padding:18px 20px 22px}
+.card-body h3{font-weight:600;font-size:1.25rem;letter-spacing:-.02em}
+.card-body p{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+.card-tags{display:flex;gap:8px;margin-top:14px}
+.card-tags i{font-style:normal;font-size:11px;font-weight:500;background:var(--sand);
+  border-radius:20px;padding:5px 12px;color:var(--ink-soft)}
+
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .hero-img{max-width:420px;order:-1}
+  .nav-r a:not(.pill){display:none}
+  .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <span class="logo">shilpa<b>.</b></span>
+  <nav class="nav-r">
+    <a href="#">Work</a><a href="#">About</a><a href="#">Gallery</a>
+    <a href="#" class="pill">Let's talk</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="avail"><i></i>Available for product design work</span>
+      <h1 class="headline">designing <span class="o">products</span> with a <span class="g">maker's</span> eye.</h1>
+      <p class="lede">I'm Shilpa — a product &amp; UX designer with eight years in fashion behind me.
+      I turn research into clean, considered interfaces, and I illustrate the details by hand.</p>
+      <div class="cta-row">
+        <a href="#" class="btn btn-dark">View work</a>
+        <a href="#" class="btn btn-line">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="../assets/profile/portrait-2.jpg" alt="Shilpa Kankaria" />
+      <span class="tagchip">Glasgow · Fashion → UX</span>
+    </div>
+  </section>
+</main>
+
+<div class="marquee">
+  <span><b>UX Design</b></span><span class="muted">Illustration</span>
+  <span><b>Product Strategy</b></span><span class="muted">Design Systems</span>
+  <span><b>Prototyping</b></span><span class="muted">Brand</span>
+  <span><b>UX Design</b></span><span class="muted">Illustration</span>
+  <span><b>Product Strategy</b></span><span class="muted">Design Systems</span>
+</div>
+
+<section class="wrap work">
+  <div class="work-head">
+    <h2>Selected work</h2>
+    <span>2024 — 2026</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="#">
+      <div class="card-img"><img src="../assets/finquest/banner.jpg" alt="FinQuest" /></div>
+      <div class="card-body">
+        <h3>FinQuest</h3>
+        <p>Gamified financial-education app</p>
+        <div class="card-tags"><i>UX/UI</i><i>Mobile</i></div>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card-img"><img src="../assets/glasgo/cover-photo-1.png" alt="Glasgo" /></div>
+      <div class="card-body">
+        <h3>Glasgo</h3>
+        <p>Student city companion app</p>
+        <div class="card-tags"><i>UX/UI</i><i>Council brief</i></div>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card-img"><img src="../assets/haus/banner-of-project.jpg" alt="Haus Hotel" /></div>
+      <div class="card-body">
+        <h3>Haus Hotel</h3>
+        <p>Boutique hotel brand &amp; website</p>
+        <div class="card-tags"><i>Visual</i><i>Web</i></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>

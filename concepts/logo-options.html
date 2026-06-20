@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logo options — Shilpa Kankaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,300;0,400;0,500;0,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--paper:#F7F4ED;--ink:#1C1814;--muted:#6B6359;--accent:#5B5BD6;--line:#E0D9CC}
+*{margin:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;padding:48px}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:1.8rem;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1100px}
+.opt{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px 36px;
+  display:flex;flex-direction:column;gap:30px;min-height:200px}
+.opt .tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.opt .desc{font-size:13px;color:var(--muted);margin-top:auto;line-height:1.5}
+.lockup{display:flex;align-items:center;min-height:60px}
+
+/* 1 — Fraunces wordmark */
+.l1{font-family:'Fraunces',serif;font-weight:500;font-size:1.7rem;letter-spacing:-.01em}
+
+/* 2 — sleek tracked sans, lowercase */
+.l2{font-family:'Inter',sans-serif;font-weight:500;font-size:1.15rem;letter-spacing:.04em}
+.l2 b{font-weight:600}.l2 span{color:var(--muted);font-weight:400}
+
+/* 3 — monogram SK */
+.l3{display:flex;align-items:center;gap:14px}
+.l3 .mono{font-family:'Fraunces',serif;font-weight:500;font-size:1.5rem;
+  border:1.5px solid var(--ink);border-radius:50%;width:52px;height:52px;
+  display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.l3 .nm{font-family:'Inter',sans-serif;font-weight:500;font-size:1.05rem;letter-spacing:.02em;line-height:1.2}
+.l3 .nm small{display:block;font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* 4 — initial period + surname, serif */
+.l4{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;letter-spacing:-.005em}
+.l4 b{color:var(--accent)}
+
+/* 5 — accent dot wordmark, sans */
+.l5{font-family:'Inter',sans-serif;font-weight:600;font-size:1.45rem;letter-spacing:-.02em}
+.l5 b{color:var(--accent)}
+
+/* 6 — stacked editorial */
+.l6{font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.26em;
+  text-transform:uppercase;line-height:1.5;border-left:2px solid var(--accent);padding-left:14px}
+.l6 span{display:block;font-weight:400;color:var(--muted);letter-spacing:.26em}
+</style>
+</head>
+<body>
+<h1>Logo options</h1>
+<p class="sub">Six minimal, sleek directions. Tell me a number (or mix two).</p>
+
+<div class="grid">
+  <div class="opt">
+    <span class="tag">Option 1 — Serif wordmark</span>
+    <div class="lockup"><span class="l1">Shilpa Kankaria</span></div>
+    <p class="desc">Pure Fraunces wordmark. Editorial, timeless, no mark.</p>
+  </div>
+
+  <div class="opt">
+    <span class="tag">Option 2 — Tracked sans</span>
+    <div class="lockup"><span class="l2"><b>shilpa</b> <span>kankaria</span></span></div>
+    <p class="desc">Lowercase Inter with light tracking. Quiet, modern, understated.</p>
+  </div>
+
+  <div class="opt">
+    <span class="tag">Option 3 — Monogram + name</span>
+    <div class="lockup"><span class="l3"><span class="mono">SK</span><span class="nm">Shilpa Kankaria<small>Designer</small></span></span></div>
+    <p class="desc">Circular SK monogram beside the name. A small brand mark, still clean.</p>
+  </div>
+
+  <div class="opt">
+    <span class="tag">Option 4 — Initial + surname</span>
+    <div class="lockup"><span class="l4">S<b>.</b> Kankaria</span></div>
+    <p class="desc">Serif, abbreviated first name with an accent period. Refined.</p>
+  </div>
+
+  <div class="opt">
+    <span class="tag">Option 5 — Accent dot</span>
+    <div class="lockup"><span class="l5">Shilpa Kankaria<b>.</b></span></div>
+    <p class="desc">Tight sans wordmark with a single periwinkle dot. Sleek, confident.</p>
+  </div>
+
+  <div class="opt">
+    <span class="tag">Option 6 — Stacked editorial</span>
+    <div class="lockup"><span class="l6">Shilpa<span>Kankaria</span></span></div>
+    <p class="desc">Two-line uppercase with an accent rule. Architectural, gallery-like.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>"I design for" — options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--paper:#F7F4ED;--ink:#1C1814;--muted:#6B6359;--muted2:#9A9183;--accent:#5B5BD6;--line:#E0D9CC}
+*{margin:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;padding:54px clamp(24px,5vw,80px)}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:2rem;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:46px}
+.h{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);
+  margin:0 0 26px;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:12px}
+.block{margin-bottom:60px}
+
+.opt{border-top:1px solid var(--line);padding:30px 0;display:flex;flex-direction:column;gap:14px}
+.opt:last-child{border-bottom:1px solid var(--line)}
+.tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.row{display:flex;align-items:baseline;gap:.4em;flex-wrap:wrap}
+.muted{color:var(--muted)}.ink{color:var(--ink)}.ac{color:var(--accent)}
+.note{font-size:12.5px;color:var(--muted)}
+
+/* type treatments */
+.t1 .row span{font-size:26px}.t1 .pfx{font-weight:500}.t1 .wd{font-weight:700;color:var(--accent)}
+.t2 .row span{font-size:40px;letter-spacing:-.02em}.t2 .pfx{font-weight:600}.t2 .wd{font-weight:800;color:var(--accent)}
+.t3 .row span{font-family:'Fraunces',serif;font-size:40px}.t3 .pfx{font-weight:400}.t3 .wd{font-style:italic;font-weight:500;color:var(--accent)}
+.t4{gap:8px}.t4 .lab{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.t4 .wd{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:48px;color:var(--accent)}
+.t5 .row span{font-size:30px;letter-spacing:.01em;text-transform:uppercase}.t5 .pfx{font-weight:700}.t5 .wd{font-weight:800;color:var(--accent)}
+
+/* word sets */
+.wset{border-top:1px solid var(--line);padding:24px 0}
+.wset:last-child{border-bottom:1px solid var(--line)}
+.wset .name{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:var(--ink);
+  background:#fff;border:1px solid var(--line);border-radius:30px;padding:7px 18px}
+.wset .ex{font-size:12.5px;color:var(--muted);margin-top:12px}
+</style>
+</head>
+<body>
+
+<h1>“I design for ___”</h1>
+<p class="sub">All on your off-white background. Pick a <b>type treatment number</b> and a <b>word set letter</b>.</p>
+
+<div class="block">
+  <p class="h">Typography — size &amp; style</p>
+
+  <div class="opt t1">
+    <span class="tag">1 · medium sans</span>
+    <div class="row"><span class="pfx ink">I design for</span><span class="wd">clarity</span></div>
+    <p class="note">~26px Inter. Supporting line, a clear step up from current.</p>
+  </div>
+
+  <div class="opt t2">
+    <span class="tag">2 · large sans statement</span>
+    <div class="row"><span class="pfx ink">I design for</span><span class="wd">clarity</span></div>
+    <p class="note">~40px Inter, tight tracking. A real second headline.</p>
+  </div>
+
+  <div class="opt t3">
+    <span class="tag">3 · serif editorial (matches hero)</span>
+    <div class="row"><span class="pfx ink">I design for</span><span class="wd">clarity</span></div>
+    <p class="note">Fraunces serif + italic accent word — echoes “&amp; <i>craft.</i>”.</p>
+  </div>
+
+  <div class="opt t4">
+    <span class="tag">4 · label + big word</span>
+    <span class="lab">What I design for</span>
+    <span class="wd">clarity</span>
+    <p class="note">Small tracked label, then a large italic word alone. Most editorial.</p>
+  </div>
+
+  <div class="opt t5">
+    <span class="tag">5 · bold caps</span>
+    <div class="row"><span class="pfx ink">I design for</span><span class="wd">clarity</span></div>
+    <p class="note">All caps, bold. Punchy, tagline-like.</p>
+  </div>
+</div>
+
+<div class="block">
+  <p class="h">Word sets — what rotates after “I design for”</p>
+
+  <div class="wset">
+    <p class="name">A · Outcomes</p>
+    <div class="chips"><span class="chip">clarity</span><span class="chip">confidence</span><span class="chip">trust</span><span class="chip">delight</span><span class="chip">ease</span><span class="chip">belonging</span></div>
+    <p class="ex">“I design for clarity… for confidence… for trust.” — emotional, human, memorable.</p>
+  </div>
+
+  <div class="wset">
+    <p class="name">B · People &amp; moments</p>
+    <div class="chips"><span class="chip">real people</span><span class="chip">the everyday</span><span class="chip">first impressions</span><span class="chip">the long term</span><span class="chip">everyone</span></div>
+    <p class="ex">“I design for real people… for the everyday.” — warm, grounded, inclusive.</p>
+  </div>
+
+  <div class="wset">
+    <p class="name">C · Craft &amp; disciplines (current, refined)</p>
+    <div class="chips"><span class="chip">research</span><span class="chip">strategy</span><span class="chip">interaction</span><span class="chip">design systems</span><span class="chip">illustration</span></div>
+    <p class="ex">Shows range of skills. Note: reads slightly oddly with “for” (you design <i>with</i> these).</p>
+  </div>
+
+  <div class="wset">
+    <p class="name">D · Impact</p>
+    <div class="chips"><span class="chip">understanding</span><span class="chip">usability</span><span class="chip">accessibility</span><span class="chip">simplicity</span><span class="chip">impact</span></div>
+    <p class="ex">“I design for understanding… for accessibility.” — values-led, professional.</p>
+  </div>
+
+  <div class="wset">
+    <p class="name">E · Bold &amp; opinionated</p>
+    <div class="chips"><span class="chip">humans, not users</span><span class="chip">clarity over clutter</span><span class="chip">the details</span><span class="chip">how it feels</span></div>
+    <p class="ex">Short phrases with a point of view. More personality, more risk.</p>
+  </div>
+</div>
+
+</body>
+</html>

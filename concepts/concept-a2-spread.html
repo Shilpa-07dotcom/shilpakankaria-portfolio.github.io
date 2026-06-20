@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concept A2 — Spread · Shilpa Kankaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#F4F1EA; --paper-2:#EAE5DA; --ink:#191712; --ink-soft:#57514A;
+  --accent:#33312B; --line:#D6CFC1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Jost',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.label{font-family:'Jost',sans-serif;font-weight:400;font-size:11.5px;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:26px clamp(24px,5vw,64px)}
+.nav .brand{font-family:'Playfair Display',serif;font-weight:500;font-size:1.45rem;letter-spacing:.01em}
+.nav nav{display:flex;gap:34px}
+.nav nav a{color:var(--ink);text-decoration:none}
+.nav nav a span{border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .3s}
+.nav nav a:hover span{border-color:var(--ink)}
+
+.spread{display:grid;grid-template-columns:1.02fr .98fr;min-height:calc(100vh - 86px)}
+.left{padding:clamp(30px,5vw,70px) clamp(24px,4vw,60px);display:flex;flex-direction:column;justify-content:center}
+.tagline{display:flex;align-items:center;gap:14px;margin-bottom:clamp(26px,3vw,40px)}
+.tagline::after{content:"";flex:1;height:1px;background:var(--line)}
+.huge{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.8rem,6.4vw,5.6rem);
+  line-height:1.02;letter-spacing:-.01em}
+.huge em{font-style:italic}
+.huge .thin{color:var(--ink-soft)}
+.intro{max-width:44ch;color:var(--ink-soft);font-size:clamp(1rem,1.3vw,1.12rem);
+  line-height:1.7;font-weight:300;margin:clamp(24px,3vw,34px) 0 clamp(28px,3vw,40px)}
+.cta{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;
+  font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:7px}
+.cta:hover{color:var(--ink-soft);border-color:var(--ink-soft)}
+
+.right{position:relative;background:var(--paper-2);overflow:hidden}
+.right img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
+.right .stamp{position:absolute;top:26px;right:26px;width:96px;height:96px;border-radius:50%;
+  border:1px solid rgba(244,241,234,.7);color:#F4F1EA;display:flex;align-items:center;
+  justify-content:center;text-align:center;font-family:'Jost';font-size:9.5px;letter-spacing:.22em;
+  text-transform:uppercase;line-height:1.7;mix-blend-mode:difference}
+.right .yr{position:absolute;left:26px;bottom:24px;color:#F4F1EA;font-family:'Playfair Display',serif;
+  font-style:italic;font-size:1.4rem;mix-blend-mode:difference}
+
+.index{border-top:1px solid var(--line);padding:clamp(30px,4vw,52px) clamp(24px,5vw,64px) clamp(48px,6vw,80px)}
+.index-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.index-head h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.4rem}
+.row{display:grid;grid-template-columns:48px 1.6fr 1fr 80px;gap:18px;align-items:center;
+  padding:22px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink);
+  transition:padding-left .4s,background .4s}
+.row:hover{padding-left:14px}
+.row .n{font-family:'Playfair Display',serif;font-style:italic;color:var(--ink-soft);font-size:1.1rem}
+.row .ti{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1}
+.row .ro{color:var(--ink-soft);font-size:14px}
+.row .ar{text-align:right;font-size:1.2rem;color:var(--ink);transition:transform .4s}
+.row:hover .ar{transform:translate(5px,-5px)}
+
+@media(max-width:880px){
+  .spread{grid-template-columns:1fr}
+  .right{min-height:360px;order:-1}
+  .nav nav{display:none}
+  .row{grid-template-columns:32px 1fr 50px;gap:12px}
+  .row .ro{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <span class="brand">Shilpa Kankaria</span>
+  <nav class="label">
+    <a href="#"><span>Work</span></a><a href="#"><span>About</span></a>
+    <a href="#"><span>Gallery</span></a><a href="#"><span>Contact</span></a>
+  </nav>
+</header>
+
+<section class="spread">
+  <div class="left">
+    <span class="tagline label">UX &amp; Product Designer · Illustrator</span>
+    <h1 class="huge">From <em>fashion</em><br>to <span class="thin">digital</span><br>craft.</h1>
+    <p class="intro">Eight years shaping garments and brands taught me composition and restraint.
+    Now I design digital products with that same trained eye — research-led, beautifully made.</p>
+    <a href="#" class="cta">View selected work →</a>
+  </div>
+  <div class="right">
+    <img src="../assets/profile/portrait-2.jpg" alt="Shilpa Kankaria" />
+    <span class="stamp">Curiosity<br>&amp;<br>Craft</span>
+    <span class="yr">Glasgow ’26</span>
+  </div>
+</section>
+
+<section class="index">
+  <div class="index-head">
+    <h2>Selected Work</h2>
+    <span class="label">Three Projects</span>
+  </div>
+  <a class="row" href="#">
+    <span class="n">01</span>
+    <span class="ti">FinQuest</span>
+    <span class="ro">Gamified financial-education app — UX/UI</span>
+    <span class="ar">↗</span>
+  </a>
+  <a class="row" href="#">
+    <span class="n">02</span>
+    <span class="ti">Glasgo</span>
+    <span class="ro">Student city companion — UX/UI</span>
+    <span class="ar">↗</span>
+  </a>
+  <a class="row" href="#">
+    <span class="n">03</span>
+    <span class="ti">Haus Hotel</span>
+    <span class="ro">Boutique hotel brand &amp; website</span>
+    <span class="ar">↗</span>
+  </a>
+</section>
+
+</body>
+</html>

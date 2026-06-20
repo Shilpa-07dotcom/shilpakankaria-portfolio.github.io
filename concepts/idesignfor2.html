@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>"I design for" — round 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--paper:#F7F4ED;--ink:#1C1814;--muted:#6B6359;--accent:#5B5BD6;--line:#E0D9CC}
+*{margin:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;padding:50px clamp(24px,5vw,80px) 100px}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:1.7rem;margin-bottom:46px}
+.opt{border-top:1px solid var(--line);padding:30px 0 22px}
+.opt:first-child{border-top:0}
+.tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;display:block}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+
+<h1>“I design for ___” — more options</h1>
+
+<div class="opt">
+  <span class="tag">1 · same size, both calm</span>
+  <div style="display:flex;align-items:baseline;gap:.45em">
+    <span style="font-family:'Inter';font-weight:500;font-size:24px;letter-spacing:0;text-transform:none">I design for</span>
+    <span style="font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Sentence case sans, equal size, serif word same weight. Quiet, no caps, no italic.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">2 · small tracked sans label, big serif word below</span>
+  <div>
+    <span style="font-family:'Inter';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">I design for</span>
+    <div style="font-family:'Fraunces',serif;font-weight:500;font-size:46px;color:var(--accent);margin-top:8px">experiences</div>
+  </div>
+  <p class="note">Label sits above, word is the real visual moment — most editorial, biggest size contrast.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">3 · sans caps small + serif word large, same line</span>
+  <div style="display:flex;align-items:baseline;gap:.5em">
+    <span style="font-family:'Inter';font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">I design for</span>
+    <span style="font-family:'Fraunces',serif;font-weight:500;font-size:34px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">Compromise of 1 &amp; 2 — one line, but clear size hierarchy between label and word.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">4 · underline accent instead of color</span>
+  <div style="display:flex;align-items:baseline;gap:.45em">
+    <span style="font-family:'Inter';font-weight:500;font-size:24px">I design for</span>
+    <span style="font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:var(--ink);border-bottom:1.5px solid var(--accent);padding-bottom:2px">experiences</span>
+  </div>
+  <p class="note">Word stays ink-black, accent shows as an underline instead of colour change.</p>
+</div>
+
+<div class="opt">
+  <span class="tag">5 · reverse — serif prefix, sans word (your original direction)</span>
+  <div style="display:flex;align-items:baseline;gap:.45em">
+    <span style="font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:26px">I design for</span>
+    <span style="font-family:'Inter';font-weight:600;font-size:24px;color:var(--accent)">experiences</span>
+  </div>
+  <p class="note">For comparison — serif italic prefix, sans word (what was live before this round).</p>
+</div>
+
+<div class="opt">
+  <span class="tag">6 · no accent colour at all, weight only</span>
+  <div style="display:flex;align-items:baseline;gap:.45em">
+    <span style="font-family:'Inter';font-weight:400;font-size:24px;color:var(--muted)">I design for</span>
+    <span style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;color:var(--ink)">experiences</span>
+  </div>
+  <p class="note">Monochrome — prefix muted grey, word ink-black and bolder. No periwinkle at all.</p>
+</div>
+
+</body>
+</html>

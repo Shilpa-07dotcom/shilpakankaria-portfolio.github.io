@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concept C — Atelier · Shilpa Kankaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#F4F0E8; --ink:#1A1813; --ink-soft:#625C50; --accent:#C0791C;
+  --sage:#DDE3CF; --blush:#F1DCD6; --sky:#D6E2E8; --cream:#F7EFD9; --lilac:#E2DCEC;
+  --r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.disp{font-family:'Bricolage Grotesque',sans-serif}
+.wrap{max-width:1340px;margin:0 auto;padding:0 clamp(18px,3vw,40px)}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:24px clamp(18px,3vw,40px)}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:-.03em}
+.logo b{color:var(--accent)}
+.nav a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500}
+.nav-mid{display:flex;gap:30px}
+.nav-mid a{opacity:.65;transition:opacity .3s}.nav-mid a:hover{opacity:1}
+.pill{background:var(--ink);color:var(--paper);padding:10px 20px;border-radius:30px}
+
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(150px,auto);
+  gap:clamp(12px,1.4vw,18px);padding:clamp(10px,2vw,22px) 0 clamp(40px,6vw,72px)}
+.tile{border-radius:var(--r);padding:clamp(22px,2.4vw,32px);position:relative;overflow:hidden;
+  text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .4s}
+.tile.link:hover{transform:translateY(-5px)}
+.tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+
+.t-intro{grid-column:span 2;grid-row:span 2;background:var(--ink);color:var(--paper);justify-content:space-between}
+.t-intro h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
+  font-size:clamp(2.1rem,3.6vw,3.4rem);line-height:1.02;letter-spacing:-.03em;margin-top:18px}
+.t-intro h1 em{font-style:italic;color:var(--accent);font-weight:500}
+.t-intro p{color:rgba(244,240,232,.7);font-size:15px;line-height:1.6;max-width:42ch;margin-top:16px}
+.t-intro .row{display:flex;gap:12px;margin-top:24px}
+.t-intro .row a{font-size:14px;font-weight:500;text-decoration:none;padding:11px 20px;border-radius:30px}
+.t-intro .row .a1{background:var(--accent);color:#231a08}
+.t-intro .row .a2{border:1px solid rgba(244,240,232,.3);color:var(--paper)}
+
+.t-portrait{grid-column:span 1;grid-row:span 2;padding:0;background:var(--blush)}
+.t-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+
+.t-stat{grid-column:span 1;background:var(--sage);justify-content:flex-end}
+.t-stat strong{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(2.4rem,3.4vw,3.2rem);line-height:.9;letter-spacing:-.02em}
+.t-stat span{font-size:13px;color:var(--ink-soft);margin-top:6px}
+
+.t-proj{grid-column:span 2;padding:0;background:var(--cream)}
+.t-proj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.t-proj .cap{position:relative;margin-top:auto;padding:20px 22px;width:100%;
+  background:linear-gradient(to top,rgba(26,24,19,.7),transparent);color:#fff;z-index:1}
+.t-proj .cap h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.3rem}
+.t-proj .cap p{font-size:12.5px;opacity:.85}
+
+.t-proj1{grid-column:span 1;grid-row:span 2;background:var(--sky)}
+.t-proj1 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.t-gallery{grid-column:span 1;background:var(--lilac);justify-content:space-between}
+.t-gallery .arts{display:flex;gap:6px;margin-top:14px}
+.t-gallery .arts i{flex:1;aspect-ratio:1;border-radius:8px;display:block}
+.t-gallery h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.2rem;margin-top:auto}
+.t-gallery p{font-size:12.5px;color:var(--ink-soft)}
+
+.t-arrow{position:absolute;top:20px;right:20px;font-size:1rem;opacity:.5}
+
+@media(max-width:920px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .t-intro{grid-column:span 2}
+  .t-proj{grid-column:span 2}
+}
+@media(max-width:560px){
+  .bento{grid-template-columns:1fr}
+  .tile,.t-intro,.t-portrait,.t-proj,.t-proj1,.t-stat,.t-gallery{grid-column:span 1!important;grid-row:auto!important}
+  .t-portrait,.t-proj,.t-proj1{min-height:240px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav wrap" style="padding-left:0;padding-right:0">
+  <span class="logo">shilpa<b>.</b></span>
+  <nav class="nav-mid">
+    <a href="#">Work</a><a href="#">About</a><a href="#">Gallery</a><a href="#">Contact</a>
+  </nav>
+  <a href="#" class="pill">Let's connect</a>
+</header>
+
+<main class="wrap">
+  <section class="bento">
+
+    <div class="tile t-intro">
+      <span class="tag" style="opacity:.5">UX &amp; Product Designer · Illustrator</span>
+      <div>
+        <h1>A maker who fell for <em>experiences.</em></h1>
+        <p>Eight years in fashion, now designing digital products in Glasgow — with an
+        illustrator's eye for craft and detail.</p>
+      </div>
+      <div class="row">
+        <a href="#" class="a1">View work</a>
+        <a href="#" class="a2">Download CV</a>
+      </div>
+    </div>
+
+    <a class="tile t-portrait link" href="#">
+      <img src="../assets/profile/portrait-1.jpeg" alt="Shilpa Kankaria" />
+    </a>
+
+    <div class="tile t-stat">
+      <span class="tag">Experience</span>
+      <strong>8 yrs</strong>
+      <span>fashion → UX</span>
+    </div>
+
+    <div class="tile t-stat" style="background:var(--cream)">
+      <span class="tag">Education</span>
+      <strong>MSc</strong>
+      <span>UX/UI · Glasgow</span>
+    </div>
+
+    <a class="tile t-proj1 link" href="#">
+      <img src="../assets/finquest/banner.jpg" alt="FinQuest" />
+      <span class="t-arrow" style="color:#fff;z-index:2">↗</span>
+      <div class="cap" style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px;background:linear-gradient(to top,rgba(26,24,19,.7),transparent);color:#fff;z-index:1">
+        <h3 class="disp" style="font-weight:700;font-size:1.3rem">FinQuest</h3>
+        <p style="font-size:12.5px;opacity:.85">Gamified finance · UX/UI</p>
+      </div>
+    </a>
+
+    <a class="tile t-proj link" href="#">
+      <img src="../assets/glasgo/cover-photo-1.png" alt="Glasgo" />
+      <span class="t-arrow" style="color:#fff;z-index:2">↗</span>
+      <div class="cap"><h3>Glasgo</h3><p>Student city companion app</p></div>
+    </a>
+
+    <a class="tile t-proj link" href="#">
+      <img src="../assets/haus/banner-of-project.jpg" alt="Haus" />
+      <span class="t-arrow" style="color:#fff;z-index:2">↗</span>
+      <div class="cap"><h3>Haus Hotel</h3><p>Boutique brand &amp; website</p></div>
+    </a>
+
+    <a class="tile t-gallery link" href="#">
+      <span class="tag">Gallery</span>
+      <div class="arts">
+        <i style="background:var(--sage)"></i><i style="background:var(--blush)"></i>
+        <i style="background:var(--accent)"></i><i style="background:var(--sky)"></i>
+      </div>
+      <h3>Illustration</h3>
+      <p>Nature, by hand</p>
+    </a>
+
+  </section>
+</main>
+
+</body>
+</html>
