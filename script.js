@@ -5,6 +5,20 @@
   'use strict';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Version stamp ---------- */
+  fetch('/version.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(v => {
+      if (!v) return;
+      document.querySelectorAll('.footer-row').forEach(row => {
+        const tag = document.createElement('span');
+        tag.className = 'footer-version';
+        tag.textContent = `${v.branch} · ${v.commit} · built ${v.built}`;
+        row.appendChild(tag);
+      });
+    })
+    .catch(() => {});
+
   /* ---------- Loader ---------- */
   const loader = document.getElementById('loader');
   const count = document.getElementById('loaderCount');
