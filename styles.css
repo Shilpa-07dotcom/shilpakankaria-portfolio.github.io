@@ -73,8 +73,13 @@ em{font-style:italic;color:var(--accent)}
 .nav{position:fixed;top:0;left:0;right:0;z-index:800;
   display:flex;align-items:center;justify-content:space-between;
   padding:22px var(--pad);transition:padding .4s var(--ease),background .4s,box-shadow .4s}
-.nav.scrolled{padding:14px var(--pad);background:rgba(247,244,237,.78);
-  backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav.scrolled{padding:14px var(--pad);background:rgba(247,244,237,.96);box-shadow:0 1px 0 var(--line)}
+@media (min-width:881px){
+  /* backdrop-filter makes .nav the containing block for its position:fixed
+     .nav-links child, which breaks the full-screen mobile menu — so the
+     blur is desktop-only, where .nav-links is never position:fixed. */
+  .nav.scrolled{background:rgba(247,244,237,.78);backdrop-filter:blur(14px)}
+}
 .nav-logo{display:inline-flex;align-items:center}
 .logo-stack{border-left:2px solid var(--accent);padding-left:12px;
   font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
