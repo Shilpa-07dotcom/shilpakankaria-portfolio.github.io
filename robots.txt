@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /concepts/
+Disallow: /concept-b/
+Disallow: /index-maison.html
+
+Sitemap: https://www.shilpakankaria.com/sitemap.xml
