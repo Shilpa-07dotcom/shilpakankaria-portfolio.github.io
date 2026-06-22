@@ -26,10 +26,127 @@
 <meta name="twitter:image" content="https://www.shilpakankaria.com/assets/social-preview.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,300..900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="case.css" />
 <style>
+/* ============ HAUS — brand palette (sampled from design system: Burnt Red, Dark Grey) ============ */
+:root{
+  --rust:#D54B34; --rust-d:#9F3827;
+  --cream:#F7F4ED; --paper:#F3EFE6; --ink:#252523;
+  --accent:#D54B34;
+}
+body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
+
+.hs-wrap{max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,72px)}
+.hs-sec{padding:clamp(70px,10vw,140px) 0}
+.hs-eyebrow{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--rust);font-weight:700;margin-bottom:1.6rem}
+.hs-h2{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.01em;
+  font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1}
+.hs-h2 em{font-style:italic;color:var(--accent)}
+.hs-ln{display:block;overflow:hidden}
+.hs-ln>span{display:block;transform:translateY(112%);transition:transform 1s var(--ease)}
+.in .hs-ln>span{transform:translateY(0)}
+.hs-lead{max-width:58ch;color:#615b54;font-size:clamp(1.02rem,1.4vw,1.2rem);line-height:1.65;margin-top:1.1rem}
+.hs-sec-head{max-width:820px;margin-bottom:clamp(36px,5vw,60px)}
+
+/* ============ HERO ============ */
+.hs-hero{max-width:1280px;margin:0 auto;padding:clamp(120px,15vw,180px) clamp(24px,5vw,72px) clamp(50px,6vw,76px)}
+.hs-hero-back{font-size:14px;color:#6B6359;display:inline-block;margin-bottom:2.2rem;transition:color .3s}
+.hs-hero-back:hover{color:var(--accent)}
+.hs-hero-num{font-family:'Inter',sans-serif;font-weight:600;color:var(--accent);font-size:14px;
+  letter-spacing:.16em;text-transform:uppercase}
+.hs-hero h1{font-family:'Fraunces',serif;font-weight:380;letter-spacing:-.02em;
+  font-size:clamp(2.8rem,7.5vw,6rem);line-height:.98;color:var(--ink);margin:.5rem 0 1.3rem}
+.hs-hero h1 em{font-style:italic;color:var(--accent);font-variation-settings:"WONK" 0,"opsz" 72}
+.hs-hero-lede{color:#6B6359;font-size:clamp(1.02rem,1.4vw,1.2rem);line-height:1.65;max-width:58ch;margin-bottom:0}
+.hs-hero-cover{position:relative;border-radius:30px;overflow:hidden;margin-top:clamp(40px,6vw,64px);
+  box-shadow:0 50px 90px -55px rgba(0,0,0,.35)}
+.hs-hero-cover img{width:100%;height:auto;display:block}
+.hs-proto-cta{position:absolute;left:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);
+  display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:12px 22px;
+  border-radius:40px;transition:.3s var(--ease);box-shadow:0 18px 34px -18px rgba(0,0,0,.4)}
+.hs-proto-cta:hover{background:var(--ink);transform:translateY(-2px)}
+.hs-hero-meta{display:flex;gap:clamp(22px,3vw,44px);flex-wrap:wrap;margin-top:clamp(34px,4vw,46px)}
+.hs-hero-meta span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a958c;margin-bottom:.35rem}
+.hs-hero-meta strong{color:var(--ink);font-size:.95rem;font-weight:600}
+
+/* ============ BRIEF ============ */
+.hs-brief{background:var(--paper);padding:clamp(50px,7vw,90px) 0}
+.hs-brief-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,64px);align-items:center}
+.hs-brief-img{border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.25)}
+.hs-brief-img img{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:4/3}
+@media (max-width:860px){.hs-brief-grid{grid-template-columns:1fr}.hs-brief-img{order:-1}}
+
+/* ============ FEATURES ============ */
+.hs-features{background:var(--cream);padding:clamp(50px,7vw,90px) 0}
+.hs-feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(36px,5vw,56px)}
+.hs-feat-card{text-align:center}
+.hs-feat-card img{width:clamp(64px,7vw,92px);height:auto;display:block;margin:0 auto 1rem}
+.hs-feat-card h3{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+.hs-feat-card p{font-size:.82rem;line-height:1.5;color:#7a756c}
+@media (max-width:860px){.hs-feat-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ PROCESS (trimmed) ============ */
+.hs-process{background:var(--cream);padding:clamp(40px,5.5vw,70px) 0}
+
+/* ============ DESIGN SYSTEM ============ */
+.hs-system{background:var(--paper);padding:clamp(50px,7vw,90px) 0}
+.hs-sys-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);align-items:stretch;margin-top:clamp(24px,3vw,32px)}
+.hs-board{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -42px rgba(0,0,0,.2)}
+.hs-board img{width:100%;height:100%;object-fit:cover;display:block;object-position:top}
+.hs-type{background:#fff;border-radius:16px;padding:clamp(20px,2.6vw,28px);box-shadow:0 26px 50px -42px rgba(0,0,0,.2);
+  display:flex;flex-direction:column;justify-content:center}
+.hs-type .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a958c;margin-bottom:.5rem}
+.hs-type .big{font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1;color:var(--ink);margin-bottom:.3rem}
+.hs-type .alpha{font-family:'Nunito Sans',sans-serif;color:#9a958c;letter-spacing:.02em;font-size:12.5px;line-height:1.6;margin-bottom:1.1rem}
+.hs-swrow{display:flex;gap:8px;margin-top:1rem;flex-wrap:wrap}
+.hs-swrow .s{flex:1;min-width:56px;border-radius:10px;height:44px;display:flex;align-items:flex-end;padding:6px;font-size:9px;font-weight:600}
+@media(max-width:760px){.hs-sys-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ============ DELIVER · THE PRODUCT ============ */
+.hs-homescreen{background:var(--cream);padding-bottom:0;padding-top:clamp(42px,6vw,84px)}
+.hs-deliver-cover{margin-top:clamp(30px,4vw,44px);border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -55px rgba(0,0,0,.3)}
+.hs-deliver-cover img{width:100%;height:auto;display:block}
+
+/* ============ HAUS, IN ACTION ============ */
+.hs-build{background:var(--cream);padding-top:clamp(39px,5.5vw,77px)}
+.hs-feat{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,56px);align-items:stretch;margin-top:clamp(56px,7vw,90px)}
+.hs-feat:first-of-type{margin-top:clamp(48px,6vw,72px)}
+.hs-feat-copy{display:flex;flex-direction:column;justify-content:center;padding-top:1.82rem}
+.hs-feat-copy .num{font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--accent)}
+.hs-feat-copy h3{font-weight:500;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.15;margin:.5rem 0 .6rem;font-family:'Fraunces',serif}
+.hs-feat-copy p{color:#6B6359;line-height:1.6;font-size:.96rem;max-width:42ch}
+.hs-feat-media{display:flex;align-items:flex-end}
+.hs-frame{width:100%;border-radius:14px;overflow:hidden;background:#0c0b10;
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.4)}
+.hs-frame-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1a1a1a}
+.hs-frame-bar i{width:9px;height:9px;border-radius:50%;background:#3a3a3a}
+.hs-frame video{width:100%;aspect-ratio:1920/1080;display:block;object-fit:cover}
+@media(max-width:820px){
+  .hs-feat{grid-template-columns:minmax(0,1fr);gap:24px}
+  .hs-feat-media{order:-1}
+}
+
+/* ============ CLOSE ============ */
+.hs-close{background:var(--paper);color:var(--ink);text-align:center;padding-top:clamp(23px,3.3vw,46px)}
+.hs-close h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.04rem,2.08vw,1.61rem);line-height:1.1;
+  color:var(--ink);max-width:30ch;margin:0 auto}
+.hs-close h2 em{font-style:italic;color:var(--accent)}
+.hs-close .hs-eyebrow{margin-bottom:2.2rem}
+.hs-close p{color:#6B6359;line-height:1.7;max-width:62ch;margin:1.2rem auto 0}
+.hs-close .cs-linkbtn{background:var(--ink)}
+.hs-close .cs-linkbtn:hover{background:var(--accent)}
+.hs-proto-section{padding:clamp(12px,1.8vw,21.6px) 0 clamp(20px,3vw,36px);background:var(--cream)}
+.hs-proto-section .cs-linkbtn{margin-top:0}
+.hs-proto-btn{background:var(--accent)}
+.hs-proto-btn:hover{background:var(--ink)}
+
+.cs-next{max-width:1200px;margin:0 auto;padding:clamp(50px,7vw,90px) clamp(24px,5vw,72px);
+  border-top:1px solid rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cs-next a{color:var(--ink)}.cs-next a:hover{color:var(--accent)}
 .cs-next .hs-next-link{display:flex;align-items:center;gap:16px}
 .hs-next-thumb{width:64px;height:64px;border-radius:12px;overflow:hidden;flex-shrink:0;
   background:#fff;display:flex;align-items:center;justify-content:center;padding:10px;
@@ -37,6 +154,8 @@
 .hs-next-thumb img{width:100%;height:100%;display:block;object-fit:contain}
 .cs-next .hs-next-label{font-family:'Inter';font-weight:400;
   font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.hs-next-arrow{color:var(--accent);transition:transform .3s var(--ease);display:inline-block}
+.hs-next-link:hover .hs-next-arrow{transform:translateX(4px)}
 </style>
 </head>
 <body>
@@ -56,161 +175,198 @@
 </header>
 
 <main id="main-content">
-<section class="cs-hero">
-  <a href="index.html#work" class="cs-back" data-hover>← Back to work</a>
-  <p class="cs-num reveal">03 — Visual &amp; Web Design</p>
-  <h1 class="cs-title reveal">Haus Hotel</h1>
-  <p class="cs-lede reveal">A website for a boutique Glasgow hotel that blends elegance and hospitality
-  in every detail — where finding and reserving a room feels as considered as the stay itself.</p>
-  <div class="cs-cover reveal"><img width="3303" height="2007" src="assets/haus/banner-of-project.jpg" alt="Haus Hotel website" /></div>
-</section>
-
-<div class="cs-facts">
-  <div class="cs-fact reveal"><span>Role</span><strong>Visual &amp; Web Designer</strong></div>
-  <div class="cs-fact reveal"><span>Focus</span><strong>Brand · UI · Booking UX</strong></div>
-  <div class="cs-fact reveal"><span>Platform</span><strong>Responsive Website</strong></div>
-  <div class="cs-fact reveal"><span>Tools</span><strong>Figma</strong></div>
-</div>
-
-<div class="cs-stats">
-  <div class="cs-stat reveal"><strong>Brand</strong><span>identity &amp; visual language</span></div>
-  <div class="cs-stat reveal"><strong>Web UI</strong><span>editorial, responsive design</span></div>
-  <div class="cs-stat reveal"><strong>Booking</strong><span>a frictionless journey</span></div>
-</div>
-
-<!-- BRIEF -->
-<section class="cs-sec reveal">
-  <p class="cs-kicker">01 · The Brief</p>
-  <div class="cs-head"><h2 class="cs-h2">Where rooms redefine your story</h2>
-    <p class="cs-sub">An immersive showcase paired with effortless booking.</p></div>
-  <p class="cs-text">Haus is one of Glasgow's most exclusive boutique hotels, with rooms and services
-  tailored to every guest. The goal was a website that lives up to that promise — an editorial showcase
-  of the property paired with a booking experience that feels effortless rather than transactional.</p>
-</section>
-
-<!-- DISCOVER & DEVELOP (collapsed research) -->
-<section class="cs-sec reveal">
-  <p class="cs-kicker">Process</p>
-  <div class="cs-head"><h2 class="cs-h2">Research, distilled</h2>
-    <p class="cs-sub">The full discovery-to-wireframe trail, for anyone who wants it.</p></div>
-
-  <details class="cs-disclosure">
-    <summary class="cs-d-summary">
-      <span class="cs-d-label"><span class="cs-d-tag">Research</span> Audience, empathy map &amp; personas</span>
-      <span class="cs-d-chev"><svg viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </summary>
-    <div class="cs-d-body-inner"><div class="cs-d-body-pad">
-      <p class="cs-text">Understanding the discerning guest — travellers who value design, comfort and
-      a sense of occasion.</p>
-      <div class="doc"><img width="1127" height="497" src="assets/haus/target-audiencee.jpg" alt="Target audience" /></div>
-      <div class="doc-2">
-        <div class="doc"><img loading="lazy" width="3852" height="3096" src="assets/haus/empathy-map.jpg" alt="Empathy map" /></div>
-        <div class="doc"><img loading="lazy" width="3210" height="1365" src="assets/haus/pov.jpg" alt="POV statements" /></div>
-      </div>
-      <div class="doc-2">
-        <div class="doc"><img loading="lazy" width="3687" height="1921" src="assets/haus/persona1.jpg" alt="Persona 1" /></div>
-        <div class="doc"><img loading="lazy" width="3687" height="1894" src="assets/haus/persona2.jpg" alt="Persona 2" /></div>
-      </div>
-    </div></div>
-  </details>
-
-  <details class="cs-disclosure">
-    <summary class="cs-d-summary">
-      <span class="cs-d-label"><span class="cs-d-tag">Competitor Analysis</span> Benchmarking boutique hotels</span>
-      <span class="cs-d-chev"><svg viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </summary>
-    <div class="cs-d-body-inner"><div class="cs-d-body-pad">
-      <p class="cs-text">Benchmarking boutique-hotel sites revealed an opportunity: most buried booking
-      behind clutter. Haus would make reserving the most graceful moment on the page.</p>
-      <div class="doc"><img loading="lazy" width="1611" height="957" src="assets/haus/competitor-analysis.jpg" alt="Competitor analysis" /></div>
-      <div class="doc"><img loading="lazy" width="3066" height="680" src="assets/haus/proposed-features.png" alt="Proposed features" /></div>
-    </div></div>
-  </details>
-
-  <details class="cs-disclosure">
-    <summary class="cs-d-summary">
-      <span class="cs-d-label"><span class="cs-d-tag">Wireframes &amp; Iterations</span> Structure, IA &amp; flow</span>
-      <span class="cs-d-chev"><svg viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </summary>
-    <div class="cs-d-body-inner"><div class="cs-d-body-pad">
-      <p class="cs-text">One continuous, unhurried path from browsing to booking.</p>
-      <div class="doc-2">
-        <div class="doc"><img loading="lazy" width="3639" height="1544" src="assets/haus/design-processs.jpg" alt="Design process" /></div>
-        <div class="doc"><img loading="lazy" width="3066" height="4961" src="assets/haus/ia.jpg" alt="Information architecture" /></div>
-      </div>
-      <p class="cs-text"><strong>Wireframes</strong> tested the layout and booking journey before any visual polish.</p>
-      <div class="doc"><img loading="lazy" width="3243" height="1989" src="assets/haus/low-fi.jpg" alt="Low fidelity wireframes" /></div>
-      <div class="doc"><img loading="lazy" width="2738" height="1326" src="assets/haus/mid-fi-haus.jpg" alt="Mid fidelity wireframes" /></div>
-    </div></div>
-  </details>
-</section>
-
-<!-- VISUAL DIRECTION -->
-<section class="cs-sec reveal">
-  <p class="cs-kicker">Visual Direction</p>
-  <div class="cs-head"><h2 class="cs-h2">Translating tactile luxury into pixels</h2>
-    <p class="cs-sub">Warm neutrals, refined type and generous imagery — from mood board to system.</p></div>
-  <div class="doc-2">
-    <div class="doc reveal"><img loading="lazy" width="3411" height="2154" src="assets/haus/mood-board.jpg" alt="Mood board" /></div>
-    <div class="doc reveal"><img loading="lazy" width="1920" height="1080" src="assets/haus/visual-design-research.jpg" alt="Visual design research" /></div>
+<!-- ===== HERO ===== -->
+<section class="hs-hero">
+  <a href="index.html#work" class="hs-hero-back" data-hover>← Back to work</a>
+  <p class="hs-hero-num reveal">03 — Visual &amp; Web Design</p>
+  <h1 class="reveal"><span class="hs-ln"><span>Where stays <em>define</em> your story.</span></span></h1>
+  <p class="hs-hero-lede reveal">A website for a boutique Glasgow hotel that blends elegance and hospitality in every detail — where finding and reserving a room feels as considered as the stay itself.</p>
+  <div class="hs-hero-cover reveal">
+    <img width="3303" height="2007" src="assets/haus/banner-of-project.jpg" alt="Haus Hotel website" />
+    <a href="https://www.figma.com/proto/OJ4trkaPvTjSe4xitRyGHT/HAUS---Visual-Design?node-id=165-3176&starting-point-node-id=165%3A3176&t=dz5LCV85VWfs9S29-1" target="_blank" class="hs-proto-cta" data-hover>Prototype <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="doc-2">
-    <div class="doc reveal"><img loading="lazy" width="1362" height="1383" src="assets/haus/branding.jpg" alt="Branding" /></div>
-    <div class="doc reveal"><img loading="lazy" width="2178" height="3580" src="assets/haus/design-systerm.jpg" alt="Design system" /></div>
+  <div class="hs-hero-meta reveal">
+    <div><span>Role</span><strong>Visual &amp; Web Designer</strong></div>
+    <div><span>Tools</span><strong>Figma</strong></div>
   </div>
 </section>
 
-<div class="cs-pull reveal"><p>Luxury online is mostly restraint — knowing exactly what to <em>leave out</em>.</p></div>
-
-<!-- DELIVER -->
-<section class="cs-sec reveal">
-  <p class="cs-kicker">Deliver</p>
-  <div class="cs-head"><h2 class="cs-h2">The final website</h2>
-    <p class="cs-sub">An immersive homepage that leads from inspiration to booking in one elegant scroll.</p></div>
-  <div class="panel sky reveal">
-    <div class="frame">
-      <div class="frame-bar"><i></i><i></i><i></i><span>hausglasgow.com</span></div>
-      <div class="frame-win"><img loading="lazy" width="2871" height="12975" src="assets/haus/landing.jpg" alt="Haus landing page — full scroll" /></div>
+<!-- ===== BRIEF ===== -->
+<section class="hs-sec hs-brief">
+  <div class="hs-wrap hs-brief-grid">
+    <div>
+      <p class="hs-eyebrow reveal">The Brief</p>
+      <h2 class="hs-h2 reveal"><span class="hs-ln"><span>A hotel for <em>adventure</em> travellers, built to convert.</span></span></h2>
+      <p class="hs-lead reveal">Haus is a new premier hotel in Glasgow's city centre, built for a niche audience of adventure travellers. The brief: a website that communicates the brand's adventurous, sophisticated identity, makes booking effortless across devices, and turns that visual impression into reservations.</p>
     </div>
-    <p class="frame-hint">↕ scroll inside the frame to explore the full landing page</p>
-  </div>
-  <div class="doc reveal"><img loading="lazy" width="1976" height="2030" src="assets/haus/haus-home.png" alt="Haus home detail" /></div>
-  <div class="panel peach reveal">
-    <div class="frame">
-      <div class="frame-bar"><i></i><i></i><i></i><span>hausglasgow.com — pages</span></div>
-      <div class="frame-win"><img loading="lazy" width="1812" height="4278" src="assets/haus/deliver1.jpg" alt="Haus additional pages" /></div>
+    <div class="hs-brief-img reveal">
+      <img loading="lazy" src="assets/haus/mood-board.jpg" alt="Mood board of natural textures, boutique interiors and earthy tones that shaped Haus's visual direction" />
     </div>
-    <p class="frame-hint">↕ scroll inside the frame to view more pages</p>
   </div>
 </section>
 
-<!-- IN MOTION -->
-<section class="cs-sec reveal">
-  <p class="cs-kicker">In Motion</p>
-  <div class="cs-head"><h2 class="cs-h2">Haus, brought to life</h2></div>
-  <div class="phones c3">
-    <div class="phone reveal"><video src="assets/haus/video-1.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div>
-    <div class="phone reveal"><video src="assets/haus/video-2.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div>
-    <div class="phone reveal"><video src="assets/haus/video-3.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div>
-    <div class="phone reveal"><video src="assets/haus/video-4.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div>
-    <div class="phone reveal"><video src="assets/haus/video-5.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div>
+<!-- ===== FEATURES ===== -->
+<section class="hs-sec hs-features">
+  <div class="hs-wrap">
+    <p class="hs-eyebrow reveal">Proposed Solution</p>
+    <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Five features built for the <em>adventurous.</em></span></span></h2>
+    <div class="hs-feat-grid">
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-concierge.png" alt="" />
+        <h3>Adventure Concierge</h3>
+        <p>Guidance and recommendations tailored to each guest.</p>
+      </div>
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-packages.png" alt="" />
+        <h3>Adventure Packages</h3>
+        <p>Hiking, kayaking and cycling, booked in one flow.</p>
+      </div>
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-storage.png" alt="" />
+        <h3>Gear Storage</h3>
+        <p>Rental and storage for equipment, handled on-site.</p>
+      </div>
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-navigation.png" alt="" />
+        <h3>User-Centric Navigation</h3>
+        <p>Clear paths to rooms, activities and checkout.</p>
+      </div>
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-booking.png" alt="" />
+        <h3>Seamless Booking</h3>
+        <p>An interactive calendar with secure payment, built for mobile and desktop.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="cs-sec reveal">
-  <p class="cs-kicker">Reflection &amp; Prototype</p>
-  <div class="cs-head"><h2 class="cs-h2">What I learned</h2></div>
-  <p class="cs-text">Designing for luxury taught me the discipline of subtraction — every element earns
-  its place, and white space does as much work as imagery. My illustrator's eye for composition
-  translated directly to pacing the page.</p>
-  <a class="cs-linkbtn" href="assets/haus/visual-design-and-prototype-final.pdf" target="_blank" data-hover>View the full visual design &amp; prototype ↗</a>
+<!-- ===== PROCESS (trimmed) ===== -->
+<section class="hs-sec hs-process">
+  <div class="hs-wrap">
+    <p class="hs-eyebrow reveal">Process</p>
+    <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Research, distilled to what <em>mattered.</em></span></span></h2>
+    <p class="hs-lead reveal">Competitor benchmarking showed most boutique-hotel sites bury booking behind clutter — so personas, empathy mapping and wireframe iterations all pushed toward one goal: a single, unhurried path from browsing to booking.</p>
+  </div>
+</section>
+
+<!-- ===== DESIGN SYSTEM ===== -->
+<section class="hs-sec hs-system">
+  <div class="hs-wrap">
+    <div class="hs-sec-head reveal">
+      <p class="hs-eyebrow">Deliver · Design System</p>
+      <h2 class="hs-h2" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Tactile luxury, translated into <em>pixels.</em></span></span></h2>
+      <p class="cs-text">Warm neutrals, a confident sans-serif and a single accent — Burnt Red — used with restraint.</p>
+    </div>
+    <div class="hs-sys-grid reveal">
+      <div class="hs-board"><img loading="lazy" width="1216" height="2000" src="assets/haus/design-systerm.jpg" alt="Haus design system — typography, colours and iconography" /></div>
+      <div class="hs-type">
+        <p class="lbl">Typeface — Nunito Sans</p>
+        <p class="big">Aa Bb Cc</p>
+        <p class="alpha">ABCDEFGHIJKLM · abcdefghijklmnop · 1234567890</p>
+        <p class="lbl">Palette</p>
+        <div class="hs-swrow">
+          <div class="s" style="background:#D54B34;color:#fff">#D54B34</div>
+          <div class="s" style="background:#252523;color:#fff">#252523</div>
+          <div class="s" style="background:#757575;color:#fff">#757575</div>
+          <div class="s" style="background:#FFF9E9;color:#252523;border:1px solid rgba(0,0,0,.08)">#FFF9E9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DELIVER · THE PRODUCT ===== -->
+<section class="hs-sec hs-homescreen">
+  <div class="hs-wrap">
+    <div class="hs-sec-head reveal">
+      <p class="hs-eyebrow">Deliver · The product</p>
+    </div>
+    <div class="hs-deliver-cover reveal"><img loading="lazy" width="2871" height="1579" src="assets/haus/deliver-cover.jpg" alt="Haus Hotel homepage" /></div>
+  </div>
+</section>
+
+<!-- ===== HAUS, IN ACTION ===== -->
+<section class="hs-sec hs-build">
+  <div class="hs-wrap">
+    <div class="hs-sec-head reveal">
+      <h2 class="hs-h2" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Haus, <em>in action.</em></span></span></h2>
+      <p class="cs-text">The final, branded experience — from first impression to a booked stay.</p>
+    </div>
+
+    <!-- 1 Welcome -->
+    <div class="hs-feat">
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-1.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
+      <div class="hs-feat-copy reveal">
+        <span class="num">01 — WELCOME</span>
+        <h3>The Haus Effect</h3>
+        <p style="white-space:nowrap">An editorial homepage that sets the tone immediately.</p>
+      </div>
+    </div>
+
+    <!-- 2 Account -->
+    <div class="hs-feat">
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-2.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
+      <div class="hs-feat-copy reveal">
+        <span class="num">02 — ACCOUNT</span>
+        <h3>Signing in, without friction</h3>
+        <p style="white-space:nowrap">A lightweight login and signup that stays out of the way.</p>
+      </div>
+    </div>
+
+    <!-- 3 Booking -->
+    <div class="hs-feat">
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-3.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
+      <div class="hs-feat-copy reveal">
+        <span class="num">03 — BOOKING</span>
+        <h3>Search and dates, simplified</h3>
+        <p style="white-space:nowrap">One widget for location, room type, guests and dates.</p>
+      </div>
+    </div>
+
+    <!-- 4 Rooms -->
+    <div class="hs-feat">
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-4.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
+      <div class="hs-feat-copy reveal">
+        <span class="num">04 — ROOMS</span>
+        <h3>Browsing made desirable</h3>
+        <p style="white-space:nowrap">Editorial room cards with clear pricing, easy to compare.</p>
+      </div>
+    </div>
+
+    <!-- 5 Activities -->
+    <div class="hs-feat">
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-5.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
+      <div class="hs-feat-copy reveal">
+        <span class="num">05 — ACTIVITIES</span>
+        <h3>Beyond the room</h3>
+        <p style="white-space:nowrap">Curated Glasgow activities, extending the stay beyond the hotel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROTOTYPE CTA ===== -->
+<section class="hs-sec hs-proto-section">
+  <div class="hs-wrap" style="text-align:center">
+    <a href="https://www.figma.com/proto/OJ4trkaPvTjSe4xitRyGHT/HAUS---Visual-Design?node-id=165-3176&starting-point-node-id=165%3A3176&t=dz5LCV85VWfs9S29-1" target="_blank" class="cs-linkbtn reveal hs-proto-btn" data-hover>Prototype ↗</a>
+  </div>
+</section>
+
+<!-- ===== CLOSE ===== -->
+<section class="hs-sec hs-close">
+  <div class="hs-wrap">
+    <p class="hs-eyebrow reveal">Outcome</p>
+    <h2 class="reveal"><span class="hs-ln"><span>Designing for luxury through <em>restraint.</em></span></span></h2>
+    <p class="reveal">Every element earned its place, and white space did as much work as imagery — my illustrator's eye for composition translated directly into pacing the page.</p>
+    <a class="cs-linkbtn reveal" href="https://drive.google.com/file/d/15BjbY_ItGkV0NQ4FilOk9o6n6sPmTlWa/view?usp=sharing" target="_blank" rel="noopener" data-hover>Read the full report ↗</a>
+  </div>
 </section>
 
 <nav class="cs-next">
   <span>Back to start</span>
   <a href="case-finquest.html" class="hs-next-link" data-hover>
     <span class="hs-next-thumb"><img loading="lazy" width="478" height="467" src="assets/finquest/finquest-logo.png" alt="FinQuest logo" /></span>
-    <span class="hs-next-label">FinQuest <span aria-hidden="true">→</span></span>
+    <span class="hs-next-label">FinQuest <span class="hs-next-arrow" aria-hidden="true">→</span></span>
   </a>
 </nav>
 </main>
