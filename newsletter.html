@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5JZX5JJ39X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5JZX5JJ39X');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<title>Newsletter — Shilpa Kankaria</title>
+<meta name="description" content="Design Intelligence Digest — Shilpa Kankaria's newsletter on AI in UX, practical tools, and what actually works for designers today." />
+<meta property="og:title" content="Design Intelligence Digest — Shilpa Kankaria" />
+<meta property="og:description" content="A newsletter on AI in UX, practical tools, and what actually works for designers today." />
+<meta property="og:image" content="https://www.shilpakankaria.com/assets/social-preview.jpg" />
+<meta property="og:url" content="https://www.shilpakankaria.com/newsletter.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+.nl-hero{max-width:var(--max);margin:0 auto;padding:clamp(120px,16vw,180px) var(--pad) clamp(40px,6vw,60px)}
+.nl-hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);
+  color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  padding:6px 14px;border-radius:40px;margin-bottom:1.6rem}
+.nl-hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);
+  animation:pulse 2s infinite}
+.nl-title{font-family:'Fraunces',serif;font-weight:380;letter-spacing:-.01em;
+  font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.08;margin-bottom:1.2rem}
+.nl-title em{font-style:italic;color:var(--accent)}
+.nl-sub{max-width:52ch;color:var(--muted);font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.65}
+
+.nl-issues{max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(80px,12vw,140px)}
+.nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+.nl-card{background:var(--bg-2);border:1.5px solid var(--line);border-radius:24px;
+  padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px;
+  transition:border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease);
+  text-decoration:none;color:inherit}
+.nl-card:hover{border-color:var(--accent);transform:translateY(-4px);
+  box-shadow:0 24px 50px -28px rgba(91,91,214,.18)}
+.nl-issue-num{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent)}
+.nl-card h2{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(1.3rem,2.4vw,1.8rem);
+  line-height:1.12;letter-spacing:-.01em}
+.nl-card h2 em{font-style:italic;color:var(--accent)}
+.nl-card p{color:var(--muted);font-size:.97rem;line-height:1.65;flex:1}
+.nl-tags{display:flex;gap:8px;flex-wrap:wrap}
+.nl-tag{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);background:var(--bg);border:1px solid var(--line);
+  padding:4px 10px;border-radius:20px}
+.nl-read{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;
+  color:var(--accent);margin-top:4px}
+.nl-read .arr{transition:transform .3s var(--ease)}
+.nl-card:hover .arr{transform:translate(4px,-4px)}
+
+.nl-subscribe{background:var(--dark);color:#fff;padding:clamp(60px,10vw,120px) var(--pad);
+  text-align:center}
+.nl-subscribe-inner{max-width:540px;margin:0 auto}
+.nl-subscribe .eyebrow{color:rgba(255,255,255,.5)}
+.nl-subscribe h2{font-family:'Fraunces',serif;font-weight:380;letter-spacing:-.01em;
+  font-size:clamp(1.8rem,4vw,3rem);line-height:1.08;margin:1rem 0 1.2rem}
+.nl-subscribe h2 em{font-style:italic;color:var(--accent)}
+.nl-subscribe p{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.65;margin-bottom:2rem}
+.nl-subscribe-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);
+  color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;
+  padding:14px 28px;border-radius:40px;transition:.3s var(--ease);
+  box-shadow:0 18px 40px -16px rgba(91,91,214,.5)}
+.nl-subscribe-btn:hover{background:#4a4ac0;transform:translateY(-2px)}
+.nl-subscribe-btn svg{width:18px;height:18px}
+
+@media(max-width:680px){
+  .nl-grid{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-word">Design</span>
+    <span class="loader-word"><em>Intelligence.</em></span>
+    <span class="loader-count" id="loaderCount">00</span>
+  </div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="Shilpa Kankaria — home"><span class="logo-stack">Shilpa<span>Kankaria</span></span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="work.html" data-link>Work</a>
+    <a href="about.html" data-link>About</a>
+    <a href="gallery.html" data-link>Gallery</a>
+    <a href="newsletter.html" data-link class="active">Newsletter</a>
+  </nav>
+  <a href="contact.html" class="nav-cta" data-hover>Let's Connect</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="nl-hero">
+  <div class="nl-hero-tag reveal">
+    <span class="dot"></span>
+    Design Intelligence Digest
+  </div>
+  <h1 class="nl-title reveal">Design thinking,<br>without <em>the noise.</em></h1>
+  <p class="nl-sub reveal">A newsletter for designers who want clarity over hype — practical tools, real experiments, and candid takes on what's actually shifting in the industry.</p>
+</section>
+
+<!-- ISSUES -->
+<section class="nl-issues">
+  <div class="nl-grid">
+
+    <!-- Issue 02 -->
+    <a href="https://www.linkedin.com/pulse/design-intelligence-digest-shilpa-kankaria-dmoje" target="_blank" rel="noopener" class="nl-card reveal" data-hover>
+      <span class="nl-issue-num">Issue 02</span>
+      <h2>The truth behind <em>Voice UI</em> hype</h2>
+      <p>This edition cuts through the excitement around voice interfaces — examining where the technology actually stands today, what designers are getting wrong, and how design's reality is shifting as a result.</p>
+      <div class="nl-tags">
+        <span class="nl-tag">Voice UI</span>
+        <span class="nl-tag">AI Hype</span>
+        <span class="nl-tag">Design Reality</span>
+      </div>
+      <span class="nl-read">Read Issue 02 <span class="arr" aria-hidden="true">↗</span></span>
+    </a>
+
+    <!-- Issue 01 -->
+    <a href="https://www.linkedin.com/pulse/design-intelligence-digest-shilpa-kankaria-qa8he" target="_blank" rel="noopener" class="nl-card reveal" data-hover>
+      <span class="nl-issue-num">Issue 01</span>
+      <h2>The reality of <em>AI personalisation</em></h2>
+      <p>The debut issue examines how AI personalisation is reshaping UX roles — with an honest review of tools like Dovetail AI, Uizard, and Jasper, plus three implementable design changes you can apply today.</p>
+      <div class="nl-tags">
+        <span class="nl-tag">AI Personalisation</span>
+        <span class="nl-tag">Tool Reviews</span>
+        <span class="nl-tag">UX Strategy</span>
+      </div>
+      <span class="nl-read">Read Issue 01 <span class="arr" aria-hidden="true">↗</span></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="nl-subscribe">
+  <div class="nl-subscribe-inner">
+    <p class="eyebrow reveal">Stay in the loop</p>
+    <h2 class="reveal">Get the next issue<br>in your <em>feed.</em></h2>
+    <p class="reveal">New issues drop on LinkedIn. Follow the newsletter to be notified the moment a new edition lands — no noise, just signal.</p>
+    <a href="https://www.linkedin.com/in/shilpa-kankaria/" target="_blank" rel="noopener" class="nl-subscribe-btn reveal" data-hover>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V9h3ZM6.5 7.5A1.75 1.75 0 1 1 8.3 5.75 1.78 1.78 0 0 1 6.5 7.5ZM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V9h3v1.76c1.4-2.59 7-2.78 7 2.48Z"/></svg>
+      Subscribe on LinkedIn
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <span class="footer-logo"><span class="logo-stack">Shilpa<span>Kankaria</span></span></span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/shilpa-kankaria/" target="_blank" rel="noopener" aria-label="LinkedIn" data-hover><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V9h3ZM6.5 7.5A1.75 1.75 0 1 1 8.3 5.75 1.78 1.78 0 0 1 6.5 7.5ZM20 19h-3v-5.6c0-3.37-4-3.12-4 0V19h-3V9h3v1.76c1.4-2.59 7-2.78 7 2.48Z"/></svg></a>
+      <a href="mailto:shilpakankaria60@gmail.com" aria-label="Email" data-hover><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+      <a href="https://www.instagram.com/spilled_hues" target="_blank" rel="noopener" aria-label="Instagram" data-hover><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Shilpa Kankaria</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
