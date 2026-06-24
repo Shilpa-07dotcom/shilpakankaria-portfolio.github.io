@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JZX5JJ39X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -59,19 +60,17 @@
 .nl-read .arr{transition:transform .3s var(--ease)}
 .nl-card:hover .arr{transform:translate(4px,-4px)}
 
-.nl-subscribe{background:var(--dark);color:#fff;padding:clamp(60px,10vw,120px) var(--pad);
-  text-align:center}
+.nl-subscribe{background:var(--bg);border-top:1px solid var(--line);
+  padding:clamp(60px,10vw,120px) var(--pad);text-align:center}
 .nl-subscribe-inner{max-width:540px;margin:0 auto}
-.nl-subscribe .eyebrow{color:rgba(255,255,255,.5)}
 .nl-subscribe h2{font-family:'Fraunces',serif;font-weight:380;letter-spacing:-.01em;
-  font-size:clamp(1.8rem,4vw,3rem);line-height:1.08;margin:1rem 0 1.2rem}
+  font-size:clamp(1.8rem,4vw,3rem);line-height:1.08;margin:1rem 0 1.2rem;color:var(--ink)}
 .nl-subscribe h2 em{font-style:italic;color:var(--accent)}
-.nl-subscribe p{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.65;margin-bottom:2rem}
-.nl-subscribe-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);
+.nl-subscribe p{color:var(--muted);font-size:1rem;line-height:1.65;margin-bottom:2rem}
+.nl-subscribe-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);
   color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;
-  padding:14px 28px;border-radius:40px;transition:.3s var(--ease);
-  box-shadow:0 18px 40px -16px rgba(91,91,214,.5)}
-.nl-subscribe-btn:hover{background:#4a4ac0;transform:translateY(-2px)}
+  padding:14px 28px;border-radius:40px;transition:.3s var(--ease)}
+.nl-subscribe-btn:hover{background:var(--accent);transform:translateY(-2px)}
 .nl-subscribe-btn svg{width:18px;height:18px}
 
 @media(max-width:680px){
