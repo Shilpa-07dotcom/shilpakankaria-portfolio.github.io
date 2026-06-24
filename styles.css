@@ -446,7 +446,8 @@ em{font-style:italic;color:var(--accent)}
   .project,.project:nth-child(even){grid-template-columns:minmax(0,1fr);direction:ltr;gap:24px}
   .process-grid,.skills-grid{grid-template-columns:minmax(0,1fr)}
   .about-pillars{grid-template-columns:minmax(0,1fr)}
-  .masonry{columns:1}
+  .masonry{columns:2;column-gap:12px}
+  .m-item{margin-bottom:12px}
   .tl-item{grid-template-columns:minmax(0,1fr);gap:8px}
   .metric-a{right:0}.metric-b{left:0}.hv-chip{left:0}
 
