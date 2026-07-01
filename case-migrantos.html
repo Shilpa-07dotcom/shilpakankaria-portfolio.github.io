@@ -267,12 +267,12 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
 .mo-build{background:var(--mo-paper);padding-top:clamp(39px,5.5vw,77px)}
 .mo-deliver-cover{margin-top:clamp(30px,4vw,44px);border-radius:24px;overflow:hidden;box-shadow:0 50px 90px -55px rgba(0,0,0,.3)}
 .mo-deliver-cover img{width:100%;height:auto;display:block}
-.mo-feat{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,4vw,56px);align-items:stretch;margin-top:clamp(44px,6vw,72px)}
+.mo-feat{display:grid;grid-template-columns:minmax(0,.68fr) minmax(0,1.32fr);gap:clamp(28px,4vw,56px);align-items:stretch;margin-top:clamp(44px,6vw,72px)}
 .mo-feat-copy{display:flex;flex-direction:column;justify-content:center}
 .mo-feat:first-of-type{margin-top:clamp(48px,6vw,72px)}
 .mo-feat.rev .mo-feat-media{order:2}
 /* reversed rows flip the column widths too, so the copy + thumbnails always sit in the wide column and stay the same size on every row */
-.mo-feat.rev{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.mo-feat.rev{grid-template-columns:minmax(0,1.32fr) minmax(0,.68fr)}
 .mo-feat-copy .num{font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--mo-blue)}
 .mo-feat-copy h3{font-weight:500;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.15;margin:.5rem 0 .6rem;font-family:'Fraunces',serif}
 .mo-feat-copy p{color:#6B6359;line-height:1.6;font-size:.96rem;max-width:42ch}
@@ -280,7 +280,7 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
 .mo-thumbs{display:flex;gap:10px;margin-top:auto;padding-top:1.4rem}
 .mo-thumbs img{flex:1;min-width:0;height:auto;aspect-ratio:1284/2778;object-fit:cover;object-position:top;border-radius:10px;display:block;box-shadow:0 14px 26px -20px rgba(0,0,0,.25);border:0.5px solid rgba(0,0,0,.08)}
 .mo-feat-media{display:flex;justify-content:center;align-items:flex-end}
-.mo-phone{width:100%;max-width:287.5px;border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.4);aspect-ratio:9/19.5}
+.mo-phone{width:100%;max-width:320px;border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.4);aspect-ratio:9/19.5}
 .mo-phone img,.mo-phone video{width:100%;height:100%;display:block;object-fit:cover}
 /* video frames match the 720×1460 recordings so nothing is cropped at the edges */
 .mo-build .mo-phone{aspect-ratio:720/1460}
@@ -635,7 +635,7 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
       <div class="mo-feat-copy reveal">
         <span class="num">02 DOCUMENT VAULT</span>
         <h3>Every document, always to hand</h3>
-        <p>Filed by person, searchable, and flagged before they expire.</p>
+        <p>Filed by person, searchable, flagged before expiry.</p>
         <div class="mo-thumbs">
           <img loading="lazy" src="assets/migrantos/Vault All.png" alt="Vault all documents" />
           <img loading="lazy" src="assets/migrantos/Vault Shared.png" alt="Shared vault documents" />
@@ -659,7 +659,7 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
       <div class="mo-feat-copy reveal">
         <span class="num">03 FAMILY &amp; REMINDERS</span>
         <h3>A deadline for every member</h3>
-        <p>Renewals tied to each member, nudged before they lapse.</p>
+        <p>Renewals tied to each member, nudged before lapse.</p>
         <div class="mo-thumbs">
           <img loading="lazy" src="assets/migrantos/Background@3x.png" alt="Household members" />
           <img loading="lazy" src="assets/migrantos/Add Document.png" alt="Set a renewal reminder" />
@@ -713,14 +713,6 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
 <section class="mo-sec mo-proto-section">
   <div class="mo-wrap" style="text-align:center">
     <a href="https://www.figma.com/proto/EOyhcRfmRJbg3XfMgIqUKv/MigrantOS?node-id=1002-2976&p=f&t=COrQT3DWAwqQ0GHH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1002%3A2976&show-proto-sidebar=1" target="_blank" class="cs-linkbtn reveal mo-proto-btn" data-hover>Prototype <span aria-hidden="true">↗</span></a>
-  </div>
-</section>
-
-<!-- ===== CLOSE ===== -->
-<section class="mo-sec mo-close">
-  <div class="mo-wrap">
-    <p class="mo-eyebrow reveal">Outcome &amp; Reflection</p>
-    <h2 class="reveal"><span class="mo-ln"><span>A simpler way to <em>organise the move.</em></span></span></h2>
   </div>
 </section>
 
